@@ -1,0 +1,33 @@
+<h1>Edit book in Library</h1>
+
+<%= render 'form', book: @book, action: :edit %>      <!-- the form we want to render without underscore and any local variables -->
+
+<!-- <form action="<%= book_url(@book) %>" method="post">
+  <input type="hidden" name="_method" value="PATCH">
+
+
+  <label for="title">Title</label>
+  <input id="title" type="text" name="book[title]" value="<%= @book.title %>">
+
+  <label for="author">Author</label>
+  <input id="author" type="text" name="book[author]" value="<%= @book.author %>">
+
+  <label for="year">Year</label>
+  <input id="year" type="text" name="book[year]" value="<%= @book.year %>">
+
+  <label for="category">Category</label>
+  <select name="book[category]">
+    <option disabled selected><%= @book.category %></option>
+     <option value="Fiction">Fiction</option>
+     <option value="Non-Fiction">Non-Fiction</option>
+     <option value="Memior">Memior</option>
+  </select>
+
+  <br><br>
+  <label for="Description">Description</label>
+  <textarea name="book[description]"><%= @book.description %></textarea>
+
+  <br><br><br>
+  <input type="submit"  value="Update book">
+
+</form> -->

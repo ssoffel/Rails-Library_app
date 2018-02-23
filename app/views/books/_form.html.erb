@@ -1,0 +1,45 @@
+<!--Things to change:
+  -action
+  -hidden input PATCH
+  -pre-filled values
+  -submit button -->
+<% if action == :edit %>
+  <% action_url = book_url(book) %>
+<% else %>
+  <%  action_url = '/books' %>
+<%end%>
+
+<form action="<%= action_url %>" method="post">
+  <% if action == :edit %>
+    <input type="hidden" name="_method" value="PATCH">
+  <% end %>
+
+  <label for="title">Title</label>
+  <input id="title" type="text" name="book[title]" value="<%= book.title %>">
+
+  <label for="author">Author</label>
+  <input id="author" type="text" name="book[author]" value="<%= book.author %>">
+
+  <label for="year">Year</label>
+  <input id="year" type="text" name="book[year]" value="<%= book.year %>">
+
+  <label for="category">Category</label>
+  <select name="book[category]">
+    <% if action == :edit %>
+       <option disabled selected><%= book.category %></option>
+    <% else %>
+       <option disabled selected>-- Please Select --</option>
+    <% end %>
+     <option value="Fiction">Fiction</option>
+     <option value="Non-Fiction">Non-Fiction</option>
+     <option value="Memior">Memior</option>
+  </select>
+
+  <br><br>
+  <label for="Description">Description</label>
+  <textarea name="book[description]"><%= book.description %></textarea>
+
+  <br><br><br>
+  <input type="submit"  value="<%= (action == :new) ? 'Add Book' : 'Update book' %>">
+
+</form>

@@ -1,0 +1,12 @@
+<h1>My Library</h1>
+
+<!--
+  <%# ruby code that will not be printed %>
+  <%#= ruby code that we want to render %>
+-->
+
+<ul>
+  <% @books.each do |book| %>
+    <li><%= book.title  %></li>
+  <% end %>
+</ul>

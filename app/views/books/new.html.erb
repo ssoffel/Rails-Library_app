@@ -1,0 +1,36 @@
+<h1>Add Book to Inventory</h1>
+
+<!--action is URL to send database
+    method is http method we want to use -->
+
+<%= render 'form', book: @book, action: :new %>   <!-- the form we want to render without underscore and any local variabbles -->
+
+  <!-- <form class="" action="/books" method="post">
+
+  <label for="title">Title</label>
+  <input id="title" type="text" name="book[title]">
+
+  <label for="author">Author</label>
+  <input id="author" type="text" name="book[author]">
+
+  <label for="year">Year</label>
+  <input id="year" type="text" name="book[year]"> -->
+
+  <!-- Dropdown menu -->
+  <!-- <label for="category">Category</label>
+  <select id="category" name="book[category]">
+    <option disabled selected>- Please Select -</option>
+    <option value="Fiction">Fiction</option>
+    <option value="Non-Fiction">Non-Fiction</option>
+    <option value="Memoir">Memoir</option>
+
+  </select>
+  <br><br>
+  <label for="description">Description</label>
+  <textarea  name="book[description]"></textarea>
+
+  <br><br><br>
+
+  <input type="Submit" value="Add Book">
+
+</form>   -->
